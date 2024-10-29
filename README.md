@@ -11,7 +11,7 @@
 <h3>Countries Explorer Web App Using AJAX API</h3>
 <p>In this project, you will build a single-page application that uses AJAX to retrieve information about countries and display it on your website. Each time you click a button, a different country's details will load:</p>
 <p><br><br />
-<img alt="" src="https://via.placeholder.com/600x300" width="80%" /><br />
+<img alt="" src="[https://via.placeholder.com/600x300](https://github.com/wolf-math/countries/blob/main/Screenshot%202024-10-29%20at%2017.47.40.png?raw=true)" width="80%" /><br />
 <br></p>
 <p>Here is a  <a class="hi-vis" href="https://restcountries.com/" target="_blank">API reference</a>.</p>
 <p><br></p>
