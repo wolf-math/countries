@@ -9,7 +9,7 @@
 <hr />
 <h2>What you will create</h2>
 <h3>Countries Explorer Web App Using AJAX API</h3>
-<p>In this project, you will build a single-page application that uses AJAX to retrieve information about countries and display it on your website. Each time you click a button, a different country's details will load:</p>
+<p>In this project, you will build a single-page application that uses AJAX to retrieve information about countries and display it on your website. Each time you click a country flag, a different country's details will load:</p>
 <p><br><br />
 <img alt="" src="https://github.com/wolf-math/countries/blob/main/Screenshot%202024-10-29%20at%2017.47.40.png" width="80%" /><br />
 <br></p>
@@ -22,12 +22,12 @@
 <li>Create your HTML file, and add the relevant elements.</li>
 <li>In your JS file, create your functions to:
 <ul>
-<li>retrieve elements from the DOM.</li>
 <li>fetch data from the API (random country details).</li>
-<li>display information such as the country's name, capital, population, region, and flag on the DOM.</li>
+<li>create the countries and their flags.</li>
+<li>display information such as the country's name, capital, population, region, and flag on the DOM when the flag is clicked.</li>
 </ul>
 </li>
-<li>Display the data using AJAX, with a loading message until data retrieval completes. You can use <a href="https://fontawesome.com/how-to-use/on-the-web/styling/animating-icons" target="_blank">these animation icons</a> for the loading message.</li>
+<li>(Optional) Display the data using AJAX, with a loading message until data retrieval completes. You can use <a href="https://fontawesome.com/how-to-use/on-the-web/styling/animating-icons" target="_blank">these animation icons</a> for the loading message.</li>
 <li>If there’s an error retrieving the data, display a message indicating the issue.</li>
 <li>Style the page using your own CSS design ideas.</li>
 </ol>
