@@ -1,6 +1,6 @@
 # countries
 
-                     <p class="lead"><h2>What you will learn</h2>
+<h2>What you will learn</h2>
 <ul>
 <li>async/await</li>
 <li>Fetch API</li>
