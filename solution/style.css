@@ -1,0 +1,13 @@
+#countryflags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.country {
+  width: 100px;
+}
+
+.flag {
+    width: 95%;
+}
