@@ -1,13 +1,40 @@
 #countryflags {
+  width: 70vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#countryInfo {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .country {
   width: 100px;
+  padding: 10px;
+  margin: 10px
 }
 
 .flag {
     width: 95%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 5s linear infinite;
 }
