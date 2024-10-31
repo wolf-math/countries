@@ -25,27 +25,23 @@ async function getData(url) {
   return allData;
 }
 
-// do this then put on the DOM
-// getData().then((result) => {
-//   if (typeof result === 'string' && result.startsWith('Error')) {
-//     console.error(result);
-//   } else {
-//     console.log(result);
-//   }
-// });
-
 async function createFlags() {
+  // get the countryflags div
   let allCountries = document.getElementById('countryflags');
 
+  // get data for all countries
   const result = await getData(countriesUrl);
 
+  // check if there's an error
   if (typeof result === 'string' && result.startsWith('Error')) {
     console.error(result);
   } else {
-    // alphabetical order
+    // put countries in alphabetical order
     result.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
+    // loop through the countries
     result.forEach((country) => {
+      // each country gets its own div
       let newCountry = document.createElement('div');
       newCountry.id = country.cca2;
       newCountry.classList.add('country');
@@ -54,8 +50,10 @@ async function createFlags() {
         <img class="flag" src="${country.flags.png}">
       `;
 
+      // event listener
       newCountry.addEventListener('mousedown', (e) => {
         e.preventDefault();
+        // on click it should show the data
         displayData(country.cca2);
       });
 
@@ -64,20 +62,26 @@ async function createFlags() {
   }
 }
 
+// function for displaying data in the selected country section.
 async function displayData(idCode) {
+  // get data for the individual country (why did I do this? There's a good reason!)
   const result = await getData(countryUrl + idCode);
 
+  // check if there's an error in the fetch
   if (typeof result === 'string' && result.startsWith('Error')) {
     console.error(result);
   } else {
     country = result[0];
-    console.log(country);
+    // get the selectedCountry div
     const selectedCountry = document.getElementById('selectedCountry');
+    // put the info in the h3
     selectedCountry.innerText = country.name.common;
+    // get selectedCountryDetails
     const selectedCountryDetails = document.getElementById(
       'selectedCountryDetails'
     );
 
+    // inner HTML for the info selectedCountryDetails div
     const info = `
       Flag: ${country.flag}<br>
       Capital: ${country.capital[0]}<br>
